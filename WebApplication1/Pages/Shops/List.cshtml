@@ -36,6 +36,7 @@
         <td> <b>Name</b></td>
         <td><b>Location</b></td>
         <td><b>Shop Specialty</b></td>
+        <td><b>Details</b></td>
     </tr>
 
     @foreach (var shop in Model.Shops)
@@ -44,6 +45,7 @@
         <td>@shop.Name</td>
         <td>@shop.Location</td>
         <td>@shop.Specialty</td>
+        <td><a class="btn btn-lg" asp-page="./Detail" asp-route-shopId="@shop.Id"> <i class="glyphicon glyphicon-zoom-in"></i></a></td>
     </tr>
     }
 </table>

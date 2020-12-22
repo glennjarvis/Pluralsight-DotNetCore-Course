@@ -13,6 +13,7 @@ namespace OdeToFood.Data
         IEnumerable<Shops> GetAllShops();
         Shops GetShopByName(string name);
         IList<Shops> GetShopsByName(string name);
+        Shops GetShopById(int id);
     }
 
     public class InMemoryShopData : IShopData
@@ -24,9 +25,9 @@ namespace OdeToFood.Data
             MusicShopData = new List<Shops>()
             {
                 new Shops { Id = 1, Location = "Luton", Name = "Bass Guitar Central", Specialty = ShopSpecialty.BassGuitar },
-            new Shops { Id = 1, Location = "London", Name = "Guitar Maniacs", Specialty = ShopSpecialty.Guitar },
-            new Shops { Id = 1, Location = "Milton Keynes", Name = "Piano Gods", Specialty = ShopSpecialty.Piano },
-            new Shops { Id = 1, Location = "Surrey", Name = "VioNation", Specialty = ShopSpecialty.Violin }
+            new Shops { Id = 2, Location = "London", Name = "Guitar Maniacs", Specialty = ShopSpecialty.Guitar },
+            new Shops { Id = 3, Location = "Milton Keynes", Name = "Piano Gods", Specialty = ShopSpecialty.Piano },
+            new Shops { Id = 4, Location = "Surrey", Name = "VioNation", Specialty = ShopSpecialty.Violin }
             };
         }
 
@@ -47,6 +48,11 @@ namespace OdeToFood.Data
                    where s.Name.ToLower().StartsWith(name) || string.IsNullOrEmpty(name)
                    orderby s.Name
                    select s).ToList();
+        }
+
+        public Shops GetShopById(int Id)
+        {
+            return MusicShopData.Where(x => x.Id == Id).FirstOrDefault();
         }
     }
 }

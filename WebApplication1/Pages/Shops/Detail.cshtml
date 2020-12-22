@@ -1,0 +1,20 @@
+﻿@page "{shopId:int}"
+
+
+@model WebApplication1.Pages.Shops.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>@Model.shop.Name</h2>
+
+<div>ID: @Model.shop.Id</div>
+
+<div>Location: @Model.shop.Location</div>
+
+<div>Specialty: @Model.shop.Specialty</div>
+
+<a asp-page="./List" class="btn btn-default">All Shops</a>
+
+
+

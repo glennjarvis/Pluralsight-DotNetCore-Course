@@ -35,3 +35,5 @@ D:\Code\OdeToFood-DotNetCore\WebApplication1\bin\Debug\netcoreapp2.1\OdeToFood.D
 D:\Code\OdeToFood-DotNetCore\WebApplication1\bin\Debug\netcoreapp2.1\OdeToFood.Core.pdb
 D:\Code\OdeToFood-DotNetCore\WebApplication1\bin\Debug\netcoreapp2.1\OdeToFood.Data.pdb
 D:\Code\OdeToFood-DotNetCore\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Pages\Shops\List.g.cshtml.cs
+D:\Code\OdeToFood-DotNetCore\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Pages\Shops\Detail.g.cshtml.cs
+D:\Code\OdeToFood-DotNetCore\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Pages\Shops\NotFound.g.cshtml.cs
