@@ -30,3 +30,8 @@ D:\Code\OdeToFood-DotNetCore\WebApplication1\obj\Debug\netcoreapp2.1\WebApplicat
 D:\Code\OdeToFood-DotNetCore\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.dll
 D:\Code\OdeToFood-DotNetCore\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.pdb
 D:\Code\OdeToFood-DotNetCore\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csproj.CopyComplete
+D:\Code\OdeToFood-DotNetCore\WebApplication1\bin\Debug\netcoreapp2.1\OdeToFood.Core.dll
+D:\Code\OdeToFood-DotNetCore\WebApplication1\bin\Debug\netcoreapp2.1\OdeToFood.Data.dll
+D:\Code\OdeToFood-DotNetCore\WebApplication1\bin\Debug\netcoreapp2.1\OdeToFood.Core.pdb
+D:\Code\OdeToFood-DotNetCore\WebApplication1\bin\Debug\netcoreapp2.1\OdeToFood.Data.pdb
+D:\Code\OdeToFood-DotNetCore\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Pages\Shops\List.g.cshtml.cs

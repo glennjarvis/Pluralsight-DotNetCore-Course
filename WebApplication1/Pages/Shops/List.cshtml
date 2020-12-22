@@ -7,5 +7,44 @@
     ViewData["Title"] = "List";
 }
 
+<!-- This page is strictly about display-->
+
+<!--Using the At symbol, you're able to transition from html, to C# code in this page-->
+
 <h2>Shops</h2>
+
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+
+
+    <label>Search For Shop</label>
+</form>
+
+<table class="table table-bordered table-responsive table-striped table-hover"  >
+
+    <tr>
+        <td> <b>Name</b></td>
+        <td><b>Location</b></td>
+        <td><b>Shop Specialty</b></td>
+    </tr>
+
+    @foreach (var shop in Model.Shops)
+    {
+    <tr>
+        <td>@shop.Name</td>
+        <td>@shop.Location</td>
+        <td>@shop.Specialty</td>
+    </tr>
+    }
+</table>
 
