@@ -14,6 +14,11 @@ namespace WebApplication1.Pages.Shops
         public OdeToFood.Core.Shops shop{ get; set; }
         public IShopData Shopdata { get; }
 
+
+        //Binding to a successful edit, we create temp data (disappears after post) to show the user
+        [TempData]
+        public string Message { get; set; }
+
         public DetailModel(IShopData shopdata)
         {
             Shopdata = shopdata;

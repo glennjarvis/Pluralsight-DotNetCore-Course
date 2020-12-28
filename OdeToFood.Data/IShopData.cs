@@ -14,6 +14,12 @@ namespace OdeToFood.Data
         Shops GetShopByName(string name);
         IList<Shops> GetShopsByName(string name);
         Shops GetShopById(int id);
+
+        Shops Update(Shops UpdatedShop);
+
+        int Commit();
+
+        Shops Add(Shops newShop);
     }
 
     public class InMemoryShopData : IShopData
@@ -53,6 +59,30 @@ namespace OdeToFood.Data
         public Shops GetShopById(int Id)
         {
             return MusicShopData.Where(x => x.Id == Id).FirstOrDefault();
+        }
+
+        public Shops Update(Shops UpdatedShop)
+        {
+            Shops shop = MusicShopData.Where(x => x.Id == UpdatedShop.Id).SingleOrDefault();
+            if (shop != null)
+            {
+                shop.Location = UpdatedShop.Location;
+                shop.Name = UpdatedShop.Name;
+                shop.Specialty = UpdatedShop.Specialty;
+            }
+            return shop;
+        }
+
+        public int Commit()
+        {
+            return 0;
+        }
+
+        public Shops Add(Shops newShop)
+        {
+            MusicShopData.Add(newShop);
+            newShop.Id = MusicShopData.Max(x => x.Id) + 1;
+            return newShop;
         }
     }
 }

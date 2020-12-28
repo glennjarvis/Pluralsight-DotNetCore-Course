@@ -13,7 +13,7 @@
 
 <h2>Shops</h2>
 
-
+<label>Search For Shop</label>
 <form method="get">
     <div class="form-group">
         <div class="input-group">
@@ -27,7 +27,7 @@
     </div>
 
 
-    <label>Search For Shop</label>
+    
 </form>
 
 <table class="table table-bordered table-responsive table-striped table-hover"  >
@@ -37,16 +37,20 @@
         <td><b>Location</b></td>
         <td><b>Shop Specialty</b></td>
         <td><b>Details</b></td>
+        <td><b>Edit</b></td>
     </tr>
 
     @foreach (var shop in Model.Shops)
     {
-    <tr>
-        <td>@shop.Name</td>
-        <td>@shop.Location</td>
-        <td>@shop.Specialty</td>
-        <td><a class="btn btn-lg" asp-page="./Detail" asp-route-shopId="@shop.Id"> <i class="glyphicon glyphicon-zoom-in"></i></a></td>
-    </tr>
+<tr>
+    <td>@shop.Name</td>
+    <td>@shop.Location</td>
+    <td>@shop.Specialty</td>
+    <td><a class="btn btn-lg" asp-page="./Detail" asp-route-shopId="@shop.Id"> <i class="glyphicon glyphicon-zoom-in"></i></a></td>
+    <td><a class="btn btn-lg" asp-page="./Edit" asp-route-shopId="@shop.Id"> <i class="glyphicon glyphicon-edit"></i></a></td>
+</tr>
     }
 </table>
+
+<a asp-page=".\Edit" class="btn btn-primary">Add New</a>
 
